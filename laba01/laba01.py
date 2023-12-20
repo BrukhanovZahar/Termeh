@@ -95,7 +95,7 @@ VArrow, = ax1.plot(RArrowX + X[0] + VX[0], RArrowY + Y[0] + VY[0], 'r')
 # Радиус-вектор
 R_Vline, = ax1.plot([0, X[0]], [0, Y[0]], color="orange", label="$\\rho\\ (радиус-вектор)$")
 R_RArrowX, R_RArrowY = Rot2D(ArrowX, ArrowY, math.atan2(Y[0], X[0]))
-R_VArrow, = ax1.plot(R_RArrowX + X[0], R_RArrowY + Y[0], 'r', color="#41E1A5")
+R_VArrow, = ax1.plot(R_RArrowX + X[0], R_RArrowY + Y[0], 'r', color="orange")
 
 # Вектор ускорения
 W_Vline, = ax1.plot([X[0], X[0] + WX[0]], [Y[0], Y[0] + WY[0]], color="#00D939", label="$w$")
