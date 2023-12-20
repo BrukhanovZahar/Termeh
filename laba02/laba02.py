@@ -22,9 +22,6 @@ yB = lAB * sp.cos(phi)
 VmodB = sp.sqrt(sp.diff(xB, t) ** 2 + sp.diff(yB, t) ** 2)
 WmodB = sp.sqrt(sp.diff(xB, t, 2) ** 2 + sp.diff(yB, t, 2) ** 2)
 
-K = 19
-Sh = 0.4
-
 """Построение функций"""
 countOfFrames = 200
 T_start, T_stop = 0, 12
