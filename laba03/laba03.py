@@ -7,7 +7,7 @@ import sympy as sp
 
 
 # Функция, описывающая систему дифференциальных уравнений
-def formY(y, t, fV, fOm):
+def odesys(y, t, fV, fOm):
     y1, y2, y3, y4 = y
     dydt = [y3, y4, fV(y1, y2, y3, y4), fOm(y1, y2, y3, y4)]
     return dydt
@@ -85,7 +85,7 @@ T = np.linspace(T_start, T_stop, countOfFrames)
 
 fVA = sp.lambdify([xA, phi, VA, omB], dVAdt, "numpy")
 fOmB = sp.lambdify([xA, phi, VA, omB], domBdt, "numpy")
-sol = odeint(formY, y0, T, args=(fVA, fOmB))
+sol = odeint(odesys, y0, T, args=(fVA, fOmB))
 
 
 XA_def = sp.lambdify(xA, xA)
